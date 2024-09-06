@@ -360,7 +360,7 @@ void pm_rx()
             add_event(pm_settings.event_cycles, &pm_rx, 0);
 
         //Poll UART status register
-        while (*(uint8_t*)(0x01000205) & 1 != 0) {
+        while ((*(uint8_t*)(0x01000205) & 1) != 0) {
 
             //Read char from UART FIFO
             c = *(char*)(0x01000200);
