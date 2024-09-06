@@ -658,7 +658,7 @@ static int command_gte()
     char *rw = pm_parser_get_argv_ptr(1);
     char *reg = pm_parser_get_argv_ptr(2);
 
-    uint32_t value = pm_parser_get_argv_ptr(3);
+    uint32_t value = pm_parser_get_argv_dec(3);
     uint32_t reg_num = 0;
     uint32_t readback = 0;
 
