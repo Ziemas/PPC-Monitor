@@ -1398,7 +1398,7 @@ pm_cmd_t pm_core_cmds[] = {
     },
     {
         .name = "debug",
-        .help = "debug <w|b> <r|w|b> <address>",
+        .help = "debug <w|b> <r|w|b> <address>\n"
                 "debug <c>",
         .func = &command_debug
     }
