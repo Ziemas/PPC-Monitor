@@ -811,7 +811,7 @@ static int command_gte()
 static int command_xparam()
 {
     //TEMP:
-    void *xparam_str_ptr = 0xbe0a30;
+    void *xparam_str_ptr = (void *)0xbe0a30;
 
     char *rw = pm_parser_get_argv_ptr(1);
     uint32_t num = pm_parser_get_argv_dec(2);
