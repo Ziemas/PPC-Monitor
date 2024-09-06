@@ -1220,7 +1220,7 @@ static int command_ppc()
 *  arg2: <r|w|b>
 *  arg3: <address>
 */
-static void command_debug()
+static int command_debug()
 {
     char *action = pm_parser_get_argv_ptr(1);
     char *option = pm_parser_get_argv_ptr(2);
@@ -1286,6 +1286,8 @@ static void command_debug()
     default:
         break;
     }
+
+    return 0;
 }
 
 pm_cmd_t pm_core_cmds[] = {
