@@ -106,12 +106,10 @@ static int command_mem()
 
             counter++;
         } while (counter < len);
-
-    } else {
-        printf("Invalid action: %c\n", *rw);
-        return -1;
     }
 
+	printf("Invalid action: %c\n", *rw);
+	return -1;
 }
 
 /* Reg commands:
@@ -255,13 +253,10 @@ static int command_reg()
 
             counter++;
         } while (counter < len);
+	}
 
-    } else {
-       printf("Invalid action: %c\n", *rw);
-       return -1;
-    }
-
-
+	printf("Invalid action: %c\n", *rw);
+	return -1;
 }
 
 /* Dump commands:
@@ -841,10 +836,10 @@ static int command_xparam()
         } else {
             printf("XPARAM %i does not exist\n", num);
         }
-    } else {
-        printf("Invalid action: %c\n", *rw);
-        return -1;
-    }
+	}
+
+	printf("Invalid action: %c\n", *rw);
+	return -1;
 }
 
 /* Emulator commands:
@@ -1148,10 +1143,10 @@ static int command_settings()
         default:
             break;
         }
-    } else {
-        printf("Invalid action %c\n", *drw);
-        return -1;
-    }
+	}
+	
+    printf("Invalid action %c\n", *drw);
+	return -1;
 }
 
 /* TODO: PPC core commands:
@@ -1205,11 +1200,10 @@ static int command_ppc()
     } else if (*drw == 'r') {
 
     } else if (*drw == 'w') {
+	}
 
-    } else {
-        printf("Invalid action: %c\n", *drw);
-        return -1;
-    }
+	printf("Invalid action: %c\n", *drw);
+	return -1;
 }
 
 /* Debug commands:
